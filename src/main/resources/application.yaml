@@ -1,0 +1,26 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: coupon
+  datasource:
+    driver-class-name: org.springframework.data.mongodb.MongoDatabaseFactory
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/
+      database: monk_commerce
+  jackson:
+    serialization:
+      write-dates-as-timestamps: false
+
+logging:
+  level:
+    root: INFO
+    org.springframework: DEBUG
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
